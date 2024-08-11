@@ -1,4 +1,4 @@
-const { Ship } = require("./ship");
+import { Ship } from "./ship";
 
 const gameBoardMarks = {
   HIT: "hit",
@@ -33,9 +33,9 @@ class Gameboard {
         break;
       }
       if (orientation) {
-        y++;
-      } else {
         x++;
+      } else {
+        y++;
       }
     }
     if (canPlace) {
@@ -44,9 +44,9 @@ class Gameboard {
       for (let i = 0; i < shipType; i++) {
         this.board[x][y] = newShip;
         if (orientation) {
-          y++;
-        } else {
           x++;
+        } else {
+          y++;
         }
       }
     } else {
@@ -79,8 +79,4 @@ class Gameboard {
   }
 }
 
-module.exports = {
-  Gameboard,
-  orientation,
-  gameBoardMarks,
-};
+export { Gameboard, orientation, gameBoardMarks };

@@ -24,7 +24,4 @@ class Ship {
   }
 }
 
-module.exports = {
-  Ship,
-  shipTypes,
-};
+export { Ship, shipTypes };

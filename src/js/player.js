@@ -1,7 +1,7 @@
-const { Gameboard } = require("./gameboard");
+import { Gameboard } from "./gameboard";
 
 const playerType = {
-  REAL: "real",
+  HUMAN: "human",
   COMPUTER: "computer",
 };
 
@@ -9,10 +9,8 @@ class Player {
   constructor(playerType) {
     this.gameboard = new Gameboard();
     this.playerType = playerType;
+    this.ships = [];
   }
 }
 
-module.exports = {
-  playerType,
-  Player,
-};
+export { playerType, Player };
